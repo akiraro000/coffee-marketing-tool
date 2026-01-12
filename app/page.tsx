@@ -1,4 +1,8 @@
-export default function Dashboard() {
+  'use client';
+
+  import Link from 'next/link';
+
+  export default function Dashboard() {
   return (
     <div
       style={{
@@ -75,20 +79,19 @@ export default function Dashboard() {
             >
               本周已生成 12 篇
             </p>
-            <button
-              style={{
-                backgroundColor: '#8B4513',
-                color: 'white',
-                border: 'none',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                cursor: 'pointer',
-                fontWeight: 'bold',
-              }}
-            >
-              立即使用 →
-            </button>
+  <Link href="/marketing" style={{
+    backgroundColor: '#8B4513',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    display: 'inline-block'
+  }}>
+    立即使用 →
+  </Link>
           </div>
 
           {/* 智能评论回复卡片 */}
@@ -117,20 +120,19 @@ export default function Dashboard() {
             >
               待回复评论 3 条
             </p>
-            <button
-              style={{
-                backgroundColor: '#8B4513',
-                color: 'white',
-                border: 'none',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                cursor: 'pointer',
-                fontWeight: 'bold',
-              }}
-            >
-              立即处理 →
-            </button>
+  <Link href="/comments" style={{
+    backgroundColor: '#8B4513',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    display: 'inline-block'
+  }}>
+    立即处理 →
+  </Link>
           </div>
         </div>
 
@@ -176,40 +178,36 @@ export default function Dashboard() {
         </div>
       </main>
 
-      {/* 底部导航栏 */}
-      <nav
-        style={{
-          position: 'fixed',
-          bottom: '0',
-          left: '0',
-          right: '0',
-          backgroundColor: 'white',
-          borderTop: '1px solid #e0e0e0',
-          display: 'flex',
-          justifyContent: 'space-around',
-          padding: '12px 0',
-          boxShadow: '0 -2px 8px rgba(0,0,0,0.1)',
-        }}
-      >
-        <div
-          style={{ textAlign: 'center', fontSize: '12px', color: '#8B4513' }}
-        >
-          <div style={{ fontSize: '20px' }}>🏠</div>
-          <div>主页</div>
-        </div>
-        <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
-          <div style={{ fontSize: '20px' }}>📝</div>
-          <div>营销</div>
-        </div>
-        <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
-          <div style={{ fontSize: '20px' }}>💬</div>
-          <div>评论</div>
-        </div>
-        <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
-          <div style={{ fontSize: '20px' }}>⚙️</div>
-          <div>设置</div>
-        </div>
-      </nav>
+  {/* 底部导航栏 */}
+  <nav style={{
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    backgroundColor: 'white',
+    borderTop: '1px solid #e0e0e0',
+    display: 'flex',
+    justifyContent: 'space-around',
+    padding: '12px 0',
+    boxShadow: '0 -2px 8px rgba(0,0,0,0.1)'
+  }}>
+    <Link href="/" style={{ textAlign: 'center', fontSize: '12px', color: '#8B4513', textDecoration: 'none' }}>
+      <div style={{ fontSize: '20px' }}>🏠</div>
+      <div>主页</div>
+    </Link>
+    <Link href="/marketing" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+      <div style={{ fontSize: '20px' }}>📝</div>
+      <div>营销</div>
+    </Link>
+    <Link href="/comments" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+      <div style={{ fontSize: '20px' }}>💬</div>
+      <div>评论</div>
+    </Link>
+    <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
+      <div style={{ fontSize: '20px' }}>⚙️</div>
+      <div>设置</div>
+    </div>
+  </nav>
     </div>
   );
 }
