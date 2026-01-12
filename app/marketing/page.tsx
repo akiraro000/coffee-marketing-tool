@@ -628,9 +628,10 @@ export default function MarketingPage() {
     display: 'flex',
     justifyContent: 'space-around',
     padding: '12px 0',
-    boxShadow: '0 -2px 8px rgba(0,0,0,0.1)'
+    boxShadow: '0 -2px 8px rgba(0,0,0,0.1)',
+    zIndex: 1000
   }}>
-    <="/" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+    <Link href="/" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none', cursor: 'pointer' }}>
       <div style={{ fontSize: '20px' }}>🏠</div>
       <div>主页</div>
     </Link>
@@ -638,7 +639,7 @@ export default function MarketingPage() {
       <div style={{ fontSize: '20px' }}>📝</div>
       <div>营销</div>
     </div>
-    <Link href="/comments" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+    <Link href="/comments" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none', cursor: 'pointer' }}>
       <div style={{ fontSize: '20px' }}>💬</div>
       <div>评论</div>
     </Link>
