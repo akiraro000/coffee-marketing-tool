@@ -560,56 +560,36 @@ ${starRating}星
           </div>
         </main>
 
-        {/* 底部导航栏 */}
-        <nav
-          style={{
-            position: 'fixed',
-            bottom: '0',
-            left: '0',
-            right: '0',
-            backgroundColor: 'white',
-            borderTop: '1px solid #e0e0e0',
-            display: 'flex',
-            justifyContent: 'space-around',
-            padding: '12px 0',
-            boxShadow: '0 -2px 8px rgba(0,0,0,0.1)',
-          }}
-        >
-          <div
-            onClick={() => (window.location.href = '/')}
-            style={{
-              textAlign: 'center',
-              fontSize: '12px',
-              color: '#999',
-              cursor: 'pointer',
-            }}
-          >
-            <div style={{ fontSize: '20px' }}>🏠</div>
-            <div>主页</div>
-          </div>
-          <div
-            onClick={() => (window.location.href = '/marketing')}
-            style={{
-              textAlign: 'center',
-              fontSize: '12px',
-              color: '#999',
-              cursor: 'pointer',
-            }}
-          >
-            <div style={{ fontSize: '20px' }}>📝</div>
-            <div>营销</div>
-          </div>
-          <div
-            style={{ textAlign: 'center', fontSize: '12px', color: '#8B4513' }}
-          >
-            <div style={{ fontSize: '20px' }}>💬</div>
-            <div>评论</div>
-          </div>
-          <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
-            <div style={{ fontSize: '20px' }}>⚙️</div>
-            <div>设置</div>
-          </div>
-        </nav>
+  {/* 底部导航栏 */}
+  <nav style={{
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    backgroundColor: 'white',
+    borderTop: '1px solid #e0e0e0',
+    display: 'flex',
+    justifyContent: 'space-around',
+    padding: '12px 0',
+    boxShadow: '0 -2px 8px rgba(0,0,0,0.1)'
+  }}>
+    <Link href="/" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+      <div style={{ fontSize: '20px' }}>🏠</div>
+      <div>主页</div>
+    </Link>
+    <Link href="/marketing" style={{ textAlign: 'center', fontSize: '12px', color: '#999', textDecoration: 'none' }}>
+      <div style={{ fontSize: '20px' }}>📝</div>
+      <div>营销</div>
+    </Link>
+    <div style={{ textAlign: 'center', fontSize: '12px', color: '#8B4513' }}>
+      <div style={{ fontSize: '20px' }}>💬</div>
+      <div>评论</div>
+    </div>
+    <div style={{ textAlign: 'center', fontSize: '12px', color: '#999' }}>
+      <div style={{ fontSize: '20px' }}>⚙️</div>
+      <div>设置</div>
+    </div>
+  </nav>
       </div>
     );
   }
