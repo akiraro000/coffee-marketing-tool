@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 // 模拟评论数据
@@ -292,12 +293,9 @@ ${starRating}星
             gap: '12px',
           }}
         >
-          <span
-            onClick={() => (window.location.href = '/')}
-            style={{ cursor: 'pointer' }}
-          >
+          <Link href="/" style={{ cursor: 'pointer' }}>
             ←
-          </span>
+          </Link>
           <span style={{ fontSize: '18px', fontWeight: 'bold' }}>
             智能评论回复
           </span>

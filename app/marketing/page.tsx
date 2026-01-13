@@ -168,12 +168,9 @@ export default function MarketingPage() {
           gap: '12px',
         }}
       >
-        <span
-          onClick={() => (window.location.href = '/')}
-          style={{ cursor: 'pointer' }}
-        >
+        <Link href="/" style={{ cursor: 'pointer' }}>
           ←
-        </span>
+        </Link>
         <span style={{ fontSize: '18px', fontWeight: 'bold' }}>
           智能营销内容生成
         </span>
